@@ -77,6 +77,10 @@ RUN go get -d github.com/akamai/cli \
 RUN apk add --no-cache npm nodejs \
   && akamai install property-manager
 
+# cli-terraform
+RUN apk add --no-cache npm nodejs \
+  && akamai install terraform
+
 # cli-jsonnet (for some reason, does not find pip3)
 RUN apk add --no-cache python3 py3-pip gcc python3-dev py3-setuptools libffi-dev musl-dev openssl-dev \
   && cd /cli/.akamai-cli/src \
