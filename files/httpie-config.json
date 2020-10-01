@@ -1,0 +1,6 @@
+{
+  "default_options": [
+    "--timeout=300",
+    "--style=autumn"
+  ]
+}
