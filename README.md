@@ -12,5 +12,5 @@ See the Dockerfile for installed components.
 This is an example, do customize to your needs.
 
 ```bash
-docker run -it --rm -v ~/.edgerc:/root/.edgerc -v $PWD/work ynohat/akamai-devops-hse
+docker run -it --rm -v ~/.edgerc:/root/.edgerc -v $PWD:/work ynohat/akamai-devops-hse
 ```
