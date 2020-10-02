@@ -94,6 +94,12 @@ RUN apk add --no-cache python3 py3-pip gcc python3-dev py3-setuptools libffi-dev
 RUN pip3 install httpie httpie-edgegrid
 
 #####################
+# BOSSMAN
+#########
+
+RUN pip3 install bossman
+
+#####################
 # SUGAR
 #########
 
