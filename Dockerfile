@@ -11,8 +11,8 @@ WORKDIR /root
 # TERRAFORM
 #########
 
-ARG TERRAFORM_VERSION=0.13.4
-ARG TERRAFORM_SHA256SUM=a92df4a151d390144040de5d18351301e597d3fae3679a814ea57554f6aa9b24
+ARG TERRAFORM_VERSION=0.14.2
+ARG TERRAFORM_SHA256SUM=6f380c0c7a846f9e0aedb98a2073d2cbd7d1e2dc0e070273f9325f1b69e668b2
 
 # Because the builder downloads the latest akamai provider,
 # subsequent terraform init calls will download to this directory
@@ -84,7 +84,7 @@ RUN apk add --no-cache npm nodejs \
 # cli-jsonnet (for some reason, does not find pip3)
 RUN apk add --no-cache python3 py3-pip gcc python3-dev py3-setuptools libffi-dev musl-dev openssl-dev \
   && cd /cli/.akamai-cli/src \
-  && git clone --depth 1 https://github.com/ynohat/cli-jsonnet.git \
+  && git clone --depth 1 https://github.com/akamai-contrib/cli-jsonnet.git \
   && pip3 install -r cli-jsonnet/requirements.txt
 
 #####################

@@ -7,7 +7,7 @@ terraform {
 
     akamai = {
       source = "akamai/akamai"
-      version = "0.9.1"
+      version = "1.0.0"
     }
   }
 }
