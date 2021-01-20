@@ -11,8 +11,8 @@ WORKDIR /root
 # TERRAFORM
 #########
 
-ARG TERRAFORM_VERSION=0.14.2
-ARG TERRAFORM_SHA256SUM=6f380c0c7a846f9e0aedb98a2073d2cbd7d1e2dc0e070273f9325f1b69e668b2
+ARG TERRAFORM_VERSION=0.14.4
+ARG TERRAFORM_SHA256SUM=042f1f4fb47696b3442eca12bce7cce6de0b477b299503ddad6b8bc3777a54b5
 
 # Because the builder downloads the latest akamai provider,
 # subsequent terraform init calls will download to this directory
@@ -92,12 +92,6 @@ RUN apk add --no-cache python3 py3-pip gcc python3-dev py3-setuptools libffi-dev
 #########
 
 RUN pip3 install httpie httpie-edgegrid
-
-#####################
-# BOSSMAN
-#########
-
-RUN pip3 install bossman
 
 #####################
 # SUGAR
